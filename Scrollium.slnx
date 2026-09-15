@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Scrollium.Domain/Scrollium.Domain.csproj" />
+    <Project Path="src/Scrollium.Application/Scrollium.Application.csproj" />
+    <Project Path="src/Scrollium.Infrastructure/Scrollium.Infrastructure.csproj" />
+    <Project Path="src/Scrollium.Presentation/Scrollium.Presentation.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Scrollium.Tests/Scrollium.Tests.csproj" />
+  </Folder>
+</Solution>
