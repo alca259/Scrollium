@@ -803,6 +803,8 @@ Inconvenientes:
 #### Recomendación
 
 Comenzar evaluando componentes existentes únicamente para prototipos y pruebas de concepto.
+- https://github.com/SourceCodeBackup/RtfDomParser => Ojo, es antiguo y seguramente requerirá adaptación.
+- https://github.com/toptensoftware/RichTextKit => Al estar basado en SkiaSharp es posiblemente la mejor opción, aunque pone que está funcionando bajo .net 5, es posible que esté desactualizado y no funcione bien con .NET 10 y Avalonia UI 12.*
 
 Para una visión a largo plazo, Scrollium debería disponer de un editor propio basado en:
 
