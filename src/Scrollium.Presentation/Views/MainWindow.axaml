@@ -1,6 +1,7 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
+        xmlns:aeExt="clr-namespace:Scrollium.Presentation.EditorExtensions"
         x:Class="Scrollium.Presentation.Views.MainWindow"
         Title="Scrollium Editorial Engine" Width="1100" Height="750">
     <Grid ColumnDefinitions="260, *">
@@ -54,7 +55,7 @@
                 <AvaloniaEdit:TextEditor
                     Background="#595959"
                     FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
-                    FontSize="18"
+                    FontSize="14"
                     Foreground="#DCD8D0"
                     HorizontalScrollBarVisibility="Disabled"
                     Name="Editor"
@@ -82,7 +83,7 @@
                             HideCursorWhileTyping="True"
                             IndentationSize="4"
                             InheritWordWrapIndentation="False"
-                            LineHeightFactor="1.5"
+                            LineHeightFactor="1"
                             ShowBoxForControlCharacters="True"
                             ShowColumnRulers="True"
                             ShowEndOfLine="False"
