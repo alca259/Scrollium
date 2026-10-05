@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Scrollium.Presentation.Views.MainWindow"
+        xmlns:local="clr-namespace:Scrollium.Presentation.Views"
+        Title="Scrollium Editorial Engine" Width="1100" Height="750">
+  <Grid ColumnDefinitions="260, *">
+    <!--
+        
+        xmlns:vm="clr-namespace:Scrollium.Application.ViewModels;assembly=Scrollium.Application"
+        x:DataType="vm:MainViewModel"-->
+      
+        <!-- Sidebar -->
+        <Border Grid.Column="0" Background="#1E1E1E" BorderBrush="#2D2D2D" BorderThickness="0,0,1,0" Padding="10">
+            <Grid RowDefinitions="Auto, *">
+                <Button Grid.Row="0" Content="+ Nueva Escena" HorizontalAlignment="Stretch" Margin="0,0,0,10" />
+            </Grid>
+        </Border>
+
+        <!-- Editor -->
+        <Grid Grid.Column="1" RowDefinitions="Auto, *">
+        </Grid>
+    </Grid>
+</Window>
