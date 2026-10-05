@@ -6,23 +6,24 @@
     <!-- Core Application & MVVM -->
     <PackageVersion Include="CommunityToolkit.Mvvm" Version="8.4.*" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection" Version="10.0.*" />
-    
+
     <!-- Infrastructure -->
+    <PackageVersion Include="DocumentFormat.OpenXml" Version="3.5.*" />
     <PackageVersion Include="LibGit2Sharp" Version="0.32.*" />
     <PackageVersion Include="WeCantSpell.Hunspell" Version="7.0.*" />
-    <PackageVersion Include="DocumentFormat.OpenXml" Version="3.5.*" />
-    
+
     <!-- Presentation (Avalonia UI 12 Stack) -->
     <PackageVersion Include="Avalonia" Version="12.1.*" />
+    <PackageVersion Include="Avalonia.AvaloniaEdit" Version="12.0.*" />
     <PackageVersion Include="Avalonia.Desktop" Version="12.1.*" />
     <PackageVersion Include="Avalonia.Themes.Fluent" Version="12.1.*" />
     <PackageVersion Include="Avalonia.Fonts.Inter" Version="12.1.*" />
     <PackageVersion Include="ReactiveUI.Avalonia" Version="12.1.*" />
-    
+
     <!-- Testing & Benchmarks (xUnit v3) -->
+    <PackageVersion Include="BenchmarkDotNet" Version="0.15.*" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="18.*" />
     <PackageVersion Include="xunit.v3" Version="4.0.*" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="4.0.*" />
-    <PackageVersion Include="BenchmarkDotNet" Version="0.15.*" />
   </ItemGroup>
 </Project>

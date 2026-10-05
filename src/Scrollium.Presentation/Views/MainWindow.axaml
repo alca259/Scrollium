@@ -1,23 +1,99 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:AvaloniaEdit="clr-namespace:AvaloniaEdit;assembly=AvaloniaEdit"
         x:Class="Scrollium.Presentation.Views.MainWindow"
-        xmlns:local="clr-namespace:Scrollium.Presentation.Views"
         Title="Scrollium Editorial Engine" Width="1100" Height="750">
-  <Grid ColumnDefinitions="260, *">
-    <!--
-        
-        xmlns:vm="clr-namespace:Scrollium.Application.ViewModels;assembly=Scrollium.Application"
-        x:DataType="vm:MainViewModel"-->
-      
+    <Grid ColumnDefinitions="260, *">
+
         <!-- Sidebar -->
-        <Border Grid.Column="0" Background="#1E1E1E" BorderBrush="#2D2D2D" BorderThickness="0,0,1,0" Padding="10">
+        <Border Grid.Column="0" Background="#2B2B2B" BorderBrush="#4B4B4B" BorderThickness="0,0,1,0" Padding="10">
             <Grid RowDefinitions="Auto, *">
                 <Button Grid.Row="0" Content="+ Nueva Escena" HorizontalAlignment="Stretch" Margin="0,0,0,10" />
+
+                <!-- Aquí irá el BINDER posteriormente -->
             </Grid>
         </Border>
 
-        <!-- Editor -->
+        <!-- Editor de Novela -->
         <Grid Grid.Column="1" RowDefinitions="Auto, *">
+
+            <!-- REGLA SUPERIOR -->
+            <Border Grid.Row="0" 
+                    Height="30" 
+                    Background="#222222" 
+                    BorderBrush="#2D2D2D" 
+                    BorderThickness="0,0,0,1"
+                    MaxWidth="750" 
+                    HorizontalAlignment="Stretch"
+                    Margin="40,10,40,0">
+        
+                <!-- 
+                    TODO: dibujar las marcas de centímetros y los selectores... Igual con un Canvas con formas geométricas (Line/Polygon) 
+                    o un control de tipo Slider personalizado con dos extremos, ya que en algún momento eso impactará por párrafo
+                -->
+                <Grid ColumnDefinitions="Auto, *, Auto">
+                    <!-- Representación visual del triángulo de sangría inicial (Word) -->
+                    <Path Data="M 0,0 L 10,0 L 5,10 Z" Fill="#A0A0A0" VerticalAlignment="Bottom" Margin="10,0,0,2"/>
+            
+                    <TextBlock Text="1 · · · 2 · · · 3 · · · 4 · · · 5 · · · 6 · · · 7 · · · 8" 
+                                Foreground="#555555" 
+                                FontSize="11" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"/>
+                </Grid>
+            </Border>
+
+            <!--
+            Contenedor centrado para limitar el ancho del texto
+            Los bloques de texto extremadamente anchos fatigan la vista al leer
+            -->
+
+            <Border Grid.Row="1" MaxWidth="750" Margin="40,20" HorizontalAlignment="Stretch">
+
+                <!-- Poner "HorizontalScrollBarVisibility" a "Auto" si "WordWrap" es "False" -->
+                <AvaloniaEdit:TextEditor
+                    Background="#595959"
+                    FontFamily="Cascadia Code,Consolas,Menlo,Monospace"
+                    FontSize="18"
+                    Foreground="#DCD8D0"
+                    HorizontalScrollBarVisibility="Disabled"
+                    Name="Editor"
+                    ShowLineNumbers="False"
+                    VerticalScrollBarVisibility="Auto"
+                    WordWrap="True">
+
+                    <!-- A futuro permitir a los usuarios configurar estas opciones -->
+                    <AvaloniaEdit:TextEditor.Options>
+                        <AvaloniaEdit:TextEditorOptions
+                            AcceptsTab="True"
+                            AllowToggleOverstrikeMode="False"
+                            AllowScrollBelowDocument="True"
+                            ColumnRulerPositions="80"
+                            ConvertTabsToSpaces="False"
+                            CutCopyWholeLine="True"
+                            EnableEmailHyperlinks="False"
+                            EnableHyperlinks="False"
+                            EnableImeSupport="True"
+                            EnableRectangularSelection="False"
+                            EnableTextDragDrop="True"
+                            EnableVirtualSpace="False"
+                            ExtendSelectionOnMouseUp="True"
+                            HighlightCurrentLine="True"
+                            HideCursorWhileTyping="True"
+                            IndentationSize="4"
+                            InheritWordWrapIndentation="False"
+                            LineHeightFactor="1.5"
+                            ShowBoxForControlCharacters="True"
+                            ShowColumnRulers="True"
+                            ShowEndOfLine="False"
+                            ShowSpaces="False"
+                            ShowTabs="False"
+                            WordWrapIndentation="0"/>
+                    </AvaloniaEdit:TextEditor.Options>
+
+                </AvaloniaEdit:TextEditor>
+            </Border>
+
         </Grid>
     </Grid>
 </Window>
