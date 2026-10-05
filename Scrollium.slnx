@@ -1,4 +1,15 @@
 <Solution>
+  <Folder Name="/Configs/">
+    <File Path=".gitignore" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Build.targets" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/Docs/">
+    <File Path="README-es.md" />
+    <File Path="README.md" />
+    <File Path="roadmap.md" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/Scrollium.Domain/Scrollium.Domain.csproj" />
     <Project Path="src/Scrollium.Application/Scrollium.Application.csproj" />
